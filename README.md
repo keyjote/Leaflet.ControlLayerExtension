@@ -31,9 +31,9 @@ This extention only has two funtions:
 
 I have tested successfully with the following Leaflet versions:
 
-* 0.4.5
-* 0.6.4
-* 0.7.1
-* 0.7.2
 * 0.7.3
+* 0.7.2
+* 0.7.1
+* 0.6.4
+* 0.4.5
 
