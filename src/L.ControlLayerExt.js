@@ -17,7 +17,7 @@ L.ControlLayerExt = L.Control.Layers.extend({
         if (layerId != 0) {
             var elements = this._form.elements;
             for(var index in elements) {
-                if (elements[index].layerId == layerId) {
+                if (elements[index] != null && elements[index].layerId == layerId) {
                     elements[index].click();
                     return;
                 }
