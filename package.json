@@ -1,0 +1,28 @@
+{
+  "name": "leaflet-controllayerextension",
+  "version": "1.0.0",
+  "description": "It is a simple extension on the L.control.layer controller which will allow the developer to switch between layers programatically when needed.",
+  "main": "src/L.ControlLayerExt.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keyjote/Leaflet.ControlLayerExtension"
+  },
+  "keywords": [
+    "leaflet"
+  ],
+  "author": "Daniel Garcia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keyjote/Leaflet.ControlLayerExtension/issues"
+  },
+  "homepage": "https://github.com/keyjote/Leaflet.ControlLayerExtension",
+  "dependencies": {
+    "leaflet": "^0.7.3"
+  }
+}
