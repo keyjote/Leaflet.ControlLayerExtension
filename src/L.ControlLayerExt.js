@@ -2,16 +2,19 @@
  * L.ControlLayerExt is an extention for the L.control.layer, this will allow the controller to select different layers programatically.
  */
  (function(factory) {
+     var L;
      if(typeof define == 'function' && define.amd) {
          define(['leaflet'], factory);
      } else if(typeof exports !== 'undefined') {
-         module.exports = factory(require('leaflet'));
+         L = require('leaflet');
+         module.exports = factory(L);
      }
      if(typeof window !== 'undefined' && window.L) {
          window.L.ControlLayerExt = factory(L);
      }
- }(function(L) {
-     var L.ControlLayerExt = {};
+}(function(L) {
+     L.ControlLayerExt = {};
+
      L.ControlLayerExt = L.Control.Layers.extend({
 
         pickLayer: function (layerName) {
@@ -47,10 +50,6 @@
             }
         },
     });
-
-    L.ControlLayerExt = function (baseLayers, overlays, options) {
-    	return new L.ControlLayerExt(baseLayers, overlays, options);
-    };
 
     return L.ControlLayerExt;
 }));
