@@ -14,7 +14,7 @@ This extention only has two funtions:
     // OR
     //var layerControl = new L.ControlLayerExt(baseLayers, overlays);
     layerControl.addTo(map);
-    
+
     ...
     ...
 
@@ -31,9 +31,9 @@ This extention only has two funtions:
 
 I have tested successfully with the following Leaflet versions:
 
+* 0.7.7
 * 0.7.3
 * 0.7.2
 * 0.7.1
 * 0.6.4
 * 0.4.5
-
