@@ -3,14 +3,15 @@
  */
  (function(factory) {
      var L;
-     if(typeof define == 'function' && define.amd) {
+     if (typeof define === 'function' && define.amd) {
          define(['leaflet'], factory);
-     } else if(typeof exports !== 'undefined') {
+     } else if (typeof module === 'object' && typeof module.exports === "object") {
          L = require('leaflet');
          module.exports = factory(L);
-     }
-     if(typeof window !== 'undefined' && window.L) {
+     } else if (typeof window !== 'undefined' && window.L) {
          window.L.ControlLayerExt = factory(L);
+     } else {
+         console.log('Not imported correctly')
      }
 }(function(L) {
      L.ControlLayerExt = {};
@@ -50,6 +51,10 @@
             }
         },
     });
+
+    L.controlLayerExt = function (baseLayers, overlays, options) {
+        return new L.ControlLayerExt(baseLayers, overlays, options);
+    };
 
     return L.ControlLayerExt;
 }));
